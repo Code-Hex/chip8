@@ -18,7 +18,7 @@ func Test_new(t *testing.T) {
 	if diff := cmp.Diff(fontsets, dumpFontSets); diff != "" {
 		t.Errorf("fontsets: (-want, +got)\n%s", diff)
 	}
-	if len(vm.registers) != 16 {
+	if len(vm.v) != 16 {
 		t.Errorf("unexpected register size")
 	}
 	if len(vm.key) != 16 {
